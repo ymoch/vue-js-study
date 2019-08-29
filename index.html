@@ -19,17 +19,27 @@
     </span>
   </div>
 
+  <div id="app-3">
+    <span v-if="seen">Now you see me</span>
+  </div>
+
   <script>
-    var app = new Vue({
+    const app = new Vue({
       el: '#app',
       data: {
         message: 'Hello, Vie!'
       }
     })
-    var app2 = new Vue({
+    const app2 = new Vue({
       el: '#app-2',
       data: {
         message: 'You loaded this page on ' + new Date().toLocaleString()
+      }
+    })
+    const app3 = new Vue({
+      el: '#app-3',
+      data: {
+        seen: true
       }
     })
   </script>
